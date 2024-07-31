@@ -1,0 +1,11 @@
+# Space Invaders by Sanjeth
+
+## Installation
+1. Clone the repository: `git clone <repository-url>`
+2. Install the dependencies: `pip install -r requirements.txt`
+3. Run the game: `python space_invaders.py`
+
+## How to Play
+- Use the arrow keys to move the player.
+- Press space to fire bullets.
+- Avoid enemies reaching the bottom of the screen.
