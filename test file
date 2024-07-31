@@ -1,0 +1,23 @@
+import unittest
+from game import Game
+
+class TestGame(unittest.TestCase):
+    def setUp(self):
+        self.game = Game()
+
+    def test_initial_conditions(self):
+        self.assertEqual(self.game.score_value, 0)
+        self.assertEqual(len(self.game.enemies), 6)
+        self.assertEqual(self.game.bullet_state, "ready")
+
+    def test_bullet_fire(self):
+        self.game.bullet_state = "ready"
+        self.game.fire_bullet(self.game.player_x, self.game.bullet_y)
+        self.assertEqual(self.game.bullet_state, "fire")
+
+    def test_collision_detection(self):
+        self.assertTrue(self.game.is_collision(100, 100, 100, 100))
+        self.assertFalse(self.game.is_collision(0, 0, 100, 100))
+
+if __name__ == "__main__":
+    unittest.main()
