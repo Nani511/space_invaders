@@ -17,7 +17,7 @@ ENEMY_DROP = 40
 class Game:
     def __init__(self):
         self.screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-        pygame.display.set_caption("Space Invaders by Sanjeth")
+        pygame.display.set_caption("Space Invaders by Sanjeeth , Hassan ")
 
         self.player_img = self.create_surface((64, 64), (0, 255, 0))
         self.player_x = 370
